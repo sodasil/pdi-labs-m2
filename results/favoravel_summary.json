@@ -1,0 +1,37 @@
+{
+  "input_mask": "images/output/favoravel_otsu.png",
+  "connectivity": 8,
+  "min_area": 20,
+  "connectivity_comparison_initial": {
+    "count_conn4_raw": 94,
+    "count_conn8_raw": 51
+  },
+  "initial_mask": {
+    "raw_components": 51,
+    "kept_components": 26,
+    "total_foreground_pixels": 98328
+  },
+  "morphological_sequence": [
+    {
+      "stage": 1,
+      "operation": "opening",
+      "kernel_shape": "ellipse",
+      "kernel_size": 3,
+      "iterations": 1,
+      "output_file": "results/favoravel_stage1_opening.png"
+    },
+    {
+      "stage": 2,
+      "operation": "closing",
+      "kernel_shape": "ellipse",
+      "kernel_size": 3,
+      "iterations": 1,
+      "output_file": "results/favoravel_stage2_closing.png"
+    }
+  ],
+  "final_mask": {
+    "raw_components": 35,
+    "kept_components": 29,
+    "total_foreground_pixels": 97757
+  }
+}

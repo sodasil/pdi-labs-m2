@@ -1,0 +1,37 @@
+{
+  "input_mask": "images/output/dificil_fixed.png",
+  "connectivity": 8,
+  "min_area": 20,
+  "connectivity_comparison_initial": {
+    "count_conn4_raw": 7619,
+    "count_conn8_raw": 5804
+  },
+  "initial_mask": {
+    "raw_components": 5804,
+    "kept_components": 215,
+    "total_foreground_pixels": 2181895
+  },
+  "morphological_sequence": [
+    {
+      "stage": 1,
+      "operation": "opening",
+      "kernel_shape": "ellipse",
+      "kernel_size": 3,
+      "iterations": 1,
+      "output_file": "results/dificil_stage1_opening.png"
+    },
+    {
+      "stage": 2,
+      "operation": "closing",
+      "kernel_shape": "ellipse",
+      "kernel_size": 3,
+      "iterations": 1,
+      "output_file": "results/dificil_stage2_closing.png"
+    }
+  ],
+  "final_mask": {
+    "raw_components": 623,
+    "kept_components": 169,
+    "total_foreground_pixels": 2156042
+  }
+}
